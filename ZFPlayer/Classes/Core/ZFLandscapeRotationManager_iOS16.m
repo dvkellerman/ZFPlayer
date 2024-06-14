@@ -52,7 +52,7 @@
     UIInterfaceOrientation toOrientation = orientation;
     
     // posible edge case 
-    if (fromOrientation == toOrientation == UIInterfaceOrientationPortrait) {
+    if (fromOrientation == toOrientation) {
         return;
     }
     
