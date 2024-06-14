@@ -51,6 +51,11 @@
     UIInterfaceOrientation fromOrientation = [self getCurrentOrientation];
     UIInterfaceOrientation toOrientation = orientation;
     
+    // posible edge case 
+    if (fromOrientation == toOrientation == UIInterfaceOrientationPortrait) {
+        return;
+    }
+    
     UIWindow *sourceWindow = self.containerView.window;
     CGRect sourceFrame = [self.containerView convertRect:self.containerView.bounds toView:sourceWindow];
     CGRect screenBounds = UIScreen.mainScreen.bounds;
